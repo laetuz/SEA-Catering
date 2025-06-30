@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "877825872777",
+    "project_id": "neotica-seacatering",
+    "storage_bucket": "neotica-seacatering.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:877825872777:android:44f02c967cd25c80590758",
+        "android_client_info": {
+          "package_name": "id.neotica.seacatering"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDJAZjpIDPry8Zu7rMeN4yA2397-R8klSE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
