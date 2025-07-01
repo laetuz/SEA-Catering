@@ -37,7 +37,8 @@ fun NavGraph(
                     navController = navController,
                 )
             }
-            authNavGraph(navController, paddingValues)
         }
+        authNavGraph(navController, paddingValues)
+        profileNavGraph(navController, paddingValues)
     }
 }

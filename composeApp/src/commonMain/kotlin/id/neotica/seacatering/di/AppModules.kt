@@ -2,6 +2,7 @@ package id.neotica.seacatering.di
 
 import id.neotica.auth.di.authModules
 import id.neotica.ktor.ktorModule
+import id.neotica.profile.di.profileModules
 import id.neotica.seacatering.screen.home.HomeViewModel
 import org.koin.core.context.startKoin
 import org.koin.core.module.dsl.singleOf
@@ -20,5 +21,6 @@ fun initializeKoin(config: KoinAppDeclaration? = null) {
 
 val viewModelModules = module {
     includes(authModules)
+    includes(profileModules)
    singleOf(::HomeViewModel)
 }

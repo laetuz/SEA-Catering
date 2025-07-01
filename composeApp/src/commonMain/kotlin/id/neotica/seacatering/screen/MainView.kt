@@ -25,7 +25,6 @@ import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
 import dev.icerock.moko.resources.compose.painterResource
 import id.neotica.rickpository.res.MR
-import id.neotica.routes.AlexandriaScreen
 import id.neotica.routes.RootScreen
 import id.neotica.routes.Screen
 import id.neotica.seacatering.navigation.NavGraph
@@ -66,7 +65,7 @@ fun MainView() {
                 NavigationItem(
                     title = "Profile",
                     icon = painterResource(MR.images.ic_profile),
-                    screen = Screen.ProfileScreen
+                    screen = RootScreen.ProfileNav
                 )
             )
 
@@ -122,7 +121,7 @@ fun MainView() {
                                     onClick = {
                                         navController.navigate(it.screen) {
                                             navController.graph.startDestinationId.let { route ->
-                                                popUpTo(AlexandriaScreen.HomeScreen) {
+                                                popUpTo(Screen.HomeScreen) {
                                                     saveState = true
                                                     inclusive = false
                                                 }

@@ -29,12 +29,7 @@ actual suspend fun loginResult(
         val user = loginResult.user
 
         return if (user != null) {
-            if (user.isEmailVerified) {
-                ApiResult.Success("Login successful")
-            } else {
-                authKmp.currentUser?.sendEmailVerification()
-                ApiResult.Error("Email not verified. Please verify your email.")
-            }
+            ApiResult.Success("Login successful")
         } else {
             ApiResult.Error("Login failed: User not found.")
         }
@@ -64,8 +59,6 @@ actual suspend fun registerResult(
                 username = username,
                 userEmail = email
             )
-            // Send verification email
-            currentUser.sendEmailVerification()
 
             // Save user data in Firestore
 

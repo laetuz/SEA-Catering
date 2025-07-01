@@ -39,6 +39,7 @@ kotlin {
             api(libs.bundles.koin)
             implementation(projects.core.uiShared)
             implementation(projects.feature.auth)
+            implementation(projects.feature.profile)
             implementation(projects.core.routes)
             implementation(projects.core.firebase)
             implementation(projects.core.ktor)
