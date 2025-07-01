@@ -1,7 +1,5 @@
 package id.neotica.seacatering.screen.review
 
-import androidx.compose.foundation.Image
-import androidx.compose.foundation.clickable
 import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Column
@@ -22,7 +20,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Color.Companion.White
 import androidx.compose.ui.graphics.Color.Companion.Yellow
 import androidx.compose.ui.text.font.FontWeight
@@ -30,17 +27,12 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import dev.icerock.moko.resources.compose.painterResource
 import id.neotica.droidcore.component.textfield.NeoTextField
-import id.neotica.rickpository.res.MR
 import id.neotica.rickpository.res.MR.images.ic_star_filled
 import id.neotica.rickpository.res.MR.images.ic_star_outline
-import id.neotica.rickpository.res.MR.images.three_dots
 import id.neotica.routes.RootScreen
-import id.neotica.routes.Screen
 import id.neotica.seacatering.screen.home.HomeViewModel
 import id.neotica.ui.shared.components.BasicScaffold
 import id.neotica.ui.shared.components.NeoButton
-import id.neotica.ui.shared.components.topbar.DotsMenuDropDown
-import id.neotica.ui.shared.components.topbar.DotsMenuItem
 import id.neotica.ui.shared.theme.FontSize
 import org.koin.compose.viewmodel.koinViewModel
 
