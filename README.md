@@ -1,15 +1,3 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
-
-* `/composeApp` is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - `commonMain` is for Kotlin code that’s common for all targets, especially shared Composable UI.
-  - Other folders (like `androidMain`, `iosMain`) are for Kotlin code that will be compiled for only the platform indicated in the folder name. For example, `androidMain` contains the Android Application setup and any Android-specific Composables or utilities. `iosMain` in this context would be for iOS-specific Kotlin code related to the shared UI module, though extensive UI work for iOS is typically done in `commonMain` or within the `/iosApp` Xcode project.
-
-* `/iosApp` contains the iOS application. This is the entry point for your iOS app and integrates the shared Kotlin module (which includes `composeApp`). This is also where you would add SwiftUI or UIKit code, manage iOS dependencies, and configure the Xcode project.
-
-
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
-
 # SEA Catering
 
 ## Description
@@ -20,16 +8,6 @@ SEA Catering uses a subscription model with flexible features such as choices of
 
 ## Features
 
-### 👋 Welcome Experience
-
-**Splash Screen & Onboarding**  
-Making a great first impression and introducing visitors to who we are and what we do.
-
-| Splash | Onboarding 1 | Onboarding 2 | Onboarding 3 |
-|--------|---------------|---------------|---------------|
-| ![](isi nanti) | ![](isi nanti) | ![](isi nanti) | ![](isi nanti) |
-
-
 ### 👤 Regular User
 
 #### 🔐 User Authentication & Authorization
@@ -37,29 +15,26 @@ Login/register with email.
 
 | Login | Register |
 |-------|----------|
-| ![](isi nanti) | ![](isi nanti) |
+| <img src="https://github.com/user-attachments/assets/dc2cb6a3-5da3-40c1-ba35-6a5a5c388028" width="300"> | <img src="https://github.com/user-attachments/assets/b2d6b05f-556d-4583-9a98-653b4293ecbc" width="300"> |
 
 #### 🧭 Interactive Navigation
 Intuitive interface for exploring catering packages.
 
-| Home | Menu | Subscription Form |
-|------|------|-------------------|
-| ![](isi nanti) | ![](isi nanti) | ![](isi nanti) |
+| Home |
+|------|
+| <img src="https://github.com/user-attachments/assets/d1c7d8c9-0f22-494d-b955-da60576a2242" width="300"> |
 
 #### 📝 Add Testimonial
 Provide reviews and ratings for the service.
 
-<img src="isi nanti" width="300">
+<img src="https://github.com/user-attachments/assets/75392ca8-8211-4088-8ff8-25d34ba826ea" width="300">
 
 #### 📆 User Can Subscribe
-Form to select packages, delivery days, and user's personal data.
+Form to select and buy packages.
 
-<img src="isi nanti" width="300">
-
-#### 📆 View, Pause & Cancel Subscription
-Flexibility in managing active subscriptions directly from the dashboard.
-
-<img src="isi nanti" width="300">
+<img src="https://github.com/user-attachments/assets/cb9c6d44-9747-4e99-a33d-a90d780cfd37" width="300">
+<img src="https://github.com/user-attachments/assets/d5d756cf-1fc5-4020-b731-92c365980340" width="300">
+<img src="https://github.com/user-attachments/assets/ead39f77-9962-4806-992d-57f8667d1b75" width="300">
 
 ### 🛠️ Admin
 
