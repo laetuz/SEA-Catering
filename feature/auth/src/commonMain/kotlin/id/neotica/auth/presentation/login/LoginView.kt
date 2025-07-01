@@ -99,6 +99,14 @@ fun LoginView(
             contentDescription = "SEACatering Logo",
             modifier =  Modifier.fillMaxWidth().size(180.dp)
         )
+        Text(
+            text = "SEA Catering",
+            fontSize = FontSize.Big
+        )
+        Text(
+            text = "Healthy Meals, Anytime, Anywhere",
+            fontSize = FontSize.Medium
+        )
         Box(Modifier.padding(horizontal = 16.dp, vertical = 4.dp)) {
             Column {
                 Box(

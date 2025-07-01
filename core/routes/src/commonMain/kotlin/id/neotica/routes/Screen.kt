@@ -61,6 +61,14 @@ sealed class Screen {
     data class FriendProfileScreen(
         val userId: String
     )
+
+    //Subscription Navigation
+    @Serializable
+    data object SubscriptionScreen: Screen()
+    @Serializable
+    data class SubscriptionDetailScreen(val id: Int = 0): Screen()
+    @Serializable
+    data object SubscriptionPaymentScreen: Screen()
 }
 
 @Serializable
