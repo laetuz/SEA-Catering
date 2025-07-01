@@ -88,7 +88,9 @@ fun MainView() {
                 Screen.EditProfileScreen(),
                 Screen.SubscriptionScreen,
                 Screen.SubscriptionDetailScreen(),
-                Screen.SubscriptionPaymentScreen()
+                Screen.SubscriptionPaymentScreen(),
+                Screen.ReviewScreen,
+                Screen.AdminScreen
             )
 
             val bottomBarExcludedRoutes = screenSet

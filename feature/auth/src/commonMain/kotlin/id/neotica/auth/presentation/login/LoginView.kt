@@ -4,7 +4,6 @@ import androidx.compose.animation.core.LinearEasing
 import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition as rememberInfiniteTransition1
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -26,7 +25,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -37,7 +36,6 @@ import id.neotica.droidcore.component.textfield.NeoTextField
 import id.neotica.rickpository.res.MR
 import id.neotica.routes.RootScreen
 import id.neotica.routes.Screen
-import id.neotica.state.AppVariant
 import id.neotica.ui.shared.PasswordTextField
 import id.neotica.ui.shared.components.BasicScaffold
 import id.neotica.ui.shared.components.LoadingIndicator
@@ -45,6 +43,7 @@ import id.neotica.ui.shared.components.NeoButton
 import id.neotica.ui.shared.theme.DarkPrimary
 import id.neotica.ui.shared.theme.FontSize
 import org.koin.compose.viewmodel.koinViewModel
+import androidx.compose.animation.core.rememberInfiniteTransition as rememberInfiniteTransition1
 
 @Composable
 fun LoginView(
@@ -95,9 +94,11 @@ fun LoginView(
     BasicScaffold("Login", topBarVisibility = false, navController = navController) {
 
         Image(
-            painterResource(MR.images.ic_world),
+            painterResource(MR.images.logo_seacat),
             contentDescription = "SEACatering Logo",
-            modifier =  Modifier.fillMaxWidth().size(180.dp)
+            contentScale = ContentScale.Crop,
+            modifier =  Modifier
+                .fillMaxWidth().size(180.dp)
         )
         Text(
             text = "SEA Catering",

@@ -26,7 +26,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import id.neotica.droidcore.component.button.NeoButton
 import id.neotica.routes.RootScreen
 import id.neotica.routes.Screen
 import id.neotica.seacatering.dummy.menuOne
@@ -66,7 +65,10 @@ fun HomeView(
                         navController.navigate(Screen.AboutScreen)
                     },
                     DotsMenuItem("Add Review") {
-                        navController.navigate(Screen.AboutScreen)
+                        navController.navigate(Screen.ReviewScreen)
+                    },
+                    DotsMenuItem("Admin") {
+                        navController.navigate(Screen.AdminScreen)
                     }
                 ),
             )
