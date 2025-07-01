@@ -29,3 +29,9 @@ dependencyResolutionManagement {
 }
 
 include(":composeApp")
+include(":core:ui-shared")
+include(":core:routes")
+include(":core:firebase")
+include(":core:ktor")
+include(":core:domain")
+include("feature:auth")
