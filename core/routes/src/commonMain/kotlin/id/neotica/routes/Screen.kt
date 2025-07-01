@@ -69,6 +69,10 @@ sealed class Screen {
     data class SubscriptionDetailScreen(val id: Int = 0): Screen()
     @Serializable
     data class SubscriptionPaymentScreen(val id: Int = 0): Screen()
+
+    //Review
+    @Serializable
+    data object ReviewScreen: Screen()
 }
 
 @Serializable

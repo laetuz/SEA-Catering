@@ -15,6 +15,7 @@ import id.neotica.auth.authNavGraph
 import id.neotica.routes.RootScreen
 import id.neotica.routes.Screen
 import id.neotica.seacatering.screen.home.HomeView
+import id.neotica.seacatering.screen.review.ReviewView
 import id.neotica.seacatering.screen.subscription.SubscriptionView
 import id.neotica.seacatering.screen.subscription.checkout.SubscriptionPaymentView
 import id.neotica.seacatering.screen.subscription.detail.SubscriptionDetailView
@@ -54,6 +55,11 @@ fun NavGraph(
             }
             composable<Screen.SubscriptionPaymentScreen> {
                 SubscriptionPaymentView(
+                    navController = navController,
+                )
+            }
+            composable<Screen.ReviewScreen> {
+                ReviewView(
                     navController = navController,
                 )
             }

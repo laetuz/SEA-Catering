@@ -66,7 +66,7 @@ fun HomeView(
                         navController.navigate(Screen.AboutScreen)
                     },
                     DotsMenuItem("Add Review") {
-                        navController.navigate(Screen.AboutScreen)
+                        navController.navigate(Screen.ReviewScreen)
                     }
                 ),
             )

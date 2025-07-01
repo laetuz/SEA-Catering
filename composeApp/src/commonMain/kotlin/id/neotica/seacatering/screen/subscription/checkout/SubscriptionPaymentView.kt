@@ -1,7 +1,6 @@
 package id.neotica.seacatering.screen.subscription.checkout
 
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -20,9 +19,6 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.text.font.FontFamily
-import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -31,9 +27,7 @@ import co.touchlab.kermit.Logger
 import id.neotica.droidcore.component.button.NeoButton
 import id.neotica.routes.Screen
 import id.neotica.seacatering.dummy.packageList
-import id.neotica.seacatering.screen.subscription.detail.SubscriptionDetailViewModel
 import id.neotica.ui.shared.components.BasicScaffold
-import id.neotica.ui.shared.components.image.ImageCoil
 import id.neotica.ui.shared.components.topbar.DotsMenuDropDown
 import id.neotica.ui.shared.components.topbar.DotsMenuItem
 import id.neotica.ui.shared.theme.DarkPrimaryTransparent2
