@@ -73,6 +73,10 @@ sealed class Screen {
     //Review
     @Serializable
     data object ReviewScreen: Screen()
+
+    //Admin
+    @Serializable
+    data object AdminScreen: Screen()
 }
 
 @Serializable

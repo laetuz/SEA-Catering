@@ -108,8 +108,8 @@ cd SEA-Catering
 
 ### 🔐 Admin & User Login Credentials
 #### 👤 Common user account
-- Email: `user@gmail.com`
-- Password: `User123!`
+- Email: `kingkong2@gmail.com`
+- Password: `kingkong`
 
 #### 🛠️ Admin account
 - Email: `admin@gmail.com`

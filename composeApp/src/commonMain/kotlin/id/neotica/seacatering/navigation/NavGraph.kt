@@ -14,6 +14,7 @@ import androidx.navigation.navigation
 import id.neotica.auth.authNavGraph
 import id.neotica.routes.RootScreen
 import id.neotica.routes.Screen
+import id.neotica.seacatering.screen.admin.AdminView
 import id.neotica.seacatering.screen.home.HomeView
 import id.neotica.seacatering.screen.review.ReviewView
 import id.neotica.seacatering.screen.subscription.SubscriptionView
@@ -60,6 +61,11 @@ fun NavGraph(
             }
             composable<Screen.ReviewScreen> {
                 ReviewView(
+                    navController = navController,
+                )
+            }
+            composable<Screen.AdminScreen> {
+                AdminView(
                     navController = navController,
                 )
             }
