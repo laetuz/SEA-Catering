@@ -4,10 +4,10 @@ import id.neotica.auth.di.authModules
 import id.neotica.ktor.ktorModule
 import id.neotica.profile.di.profileModules
 import id.neotica.seacatering.screen.home.HomeViewModel
-import id.neotica.seacatering.screen.subscription.confirmation.SubscriptionDetailViewModel
+import id.neotica.seacatering.screen.subscription.checkout.SubscriptionPaymentViewModel
+import id.neotica.seacatering.screen.subscription.detail.SubscriptionDetailViewModel
 import org.koin.compose.viewmodel.dsl.viewModelOf
 import org.koin.core.context.startKoin
-import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.KoinAppDeclaration
 import org.koin.dsl.module
 
@@ -26,4 +26,5 @@ val viewModelModules = module {
     includes(profileModules)
     viewModelOf(::HomeViewModel)
     viewModelOf(::SubscriptionDetailViewModel)
+    viewModelOf(::SubscriptionPaymentViewModel)
 }

@@ -138,9 +138,7 @@ fun SubscriptionView(
                                 maxLines = 1,
                                 overflow = TextOverflow.Ellipsis
                             )
-                            Text(it.id.toString())
-                            NeoButton("BUY THIS PLAN") {
-                                Logger.d { "BUY THIS PLAN: ${it.id}" }
+                            NeoButton("See detail") {
                                 navController.navigate(Screen.SubscriptionDetailScreen(it.id))
                             }
                         }

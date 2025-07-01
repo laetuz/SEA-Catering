@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -29,6 +30,8 @@ import id.neotica.droidcore.component.button.NeoButton
 import id.neotica.routes.RootScreen
 import id.neotica.routes.Screen
 import id.neotica.seacatering.dummy.menuOne
+import id.neotica.seacatering.dummy.menuTwo
+import id.neotica.seacatering.dummy.model.FoodMenu
 import id.neotica.ui.shared.components.BasicScaffold
 import id.neotica.ui.shared.components.image.ImageCoil
 import id.neotica.ui.shared.components.topbar.DotsMenuDropDown
@@ -71,85 +74,104 @@ fun HomeView(
     ) {
         Text(
             text = "SEA Catering",
-            fontSize = FontSize.Bigger
+            fontSize = FontSize.Bigger,
+            modifier = Modifier.padding(horizontal = 16.dp)
+
         )
         Text(
             text = "Healthy Meals, Anytime, Anywhere",
-            fontSize = FontSize.Medium
+            fontSize = FontSize.Medium,
+            modifier = Modifier.padding(horizontal = 16.dp)
+        )
+        Spacer(Modifier.padding(16.dp))
+        HorizontalMenus(
+            title = "Our fresh menus!",
+            endTitle = "More Foods.. >>>",
+            menuList = menuOne
+        )
+        HorizontalMenus(
+            title = "Our picked menus!",
+            endTitle = "More Foods.. >>>",
+            menuList = menuTwo
         )
 
-        Row(
-            Modifier.fillMaxWidth(),
-            horizontalArrangement = Arrangement.SpaceBetween
-        ) {
-            Text(
-                "Our fresh menus!",
-                fontWeight = FontWeight.Bold,
-                fontSize = FontSize.Normal
-            )
-            Text(
-                text = "More Foods.. >>>",
-                modifier = Modifier.clickable {  },
-                fontWeight = FontWeight.Bold,
-                fontSize = FontSize.Normal
-            )
-        }
-        LazyRow(
-            horizontalArrangement = Arrangement.spacedBy(8.dp),
-            state = rememberLazyListState()
-        ) {
-            items(menuOne.take(8)) { item ->
-                Card(
-                    Modifier
-                        .clickable {
-                            // dont forget to add logic
-                        }
-                        .wrapContentHeight()
-                        .padding(2.dp),
-                    colors = CardDefaults.cardColors().copy(
-                        containerColor = DarkPrimaryTransparent2,
-                        contentColor = Color.White
-                    )
-                ) {
-                    Column(Modifier.width(144.dp)) {
-                        Box(
-                            Modifier.height(124.dp)
-                        ) {
-                            ImageCoil(
-                                item.imageUrl,
-                                scaleCustom = true,
-                                contentScale = ContentScale.Crop,
-                                fillMaxWidth = true,
-                                modifier = Modifier.fillMaxWidth()
-                            )
-                        }
-                        Column(Modifier.padding(4.dp)) {
-                            Text(
-                                item.name,
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis
-                            )
-                            Text(
-                                "${item.description}",
-                                fontSize = FontSize.Small,
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis
-                            )
-                            Text(
-                                "Rp ${item.price}",
-                                fontWeight = FontWeight.Bold,
-                                fontSize = FontSize.Normal,
-                                maxLines = 1,
-                                overflow = TextOverflow.Ellipsis
-                            )
-                        }
+
+    }
+}
+
+@Composable
+fun HorizontalMenus(
+    title: String,
+    endTitle: String,
+    menuList: List<FoodMenu>
+) {
+    Row(
+        modifier = Modifier.padding(horizontal = 16.dp).fillMaxWidth(),
+        horizontalArrangement = Arrangement.SpaceBetween,
+    ) {
+        Text(
+            title,
+            fontWeight = FontWeight.Bold,
+            fontSize = FontSize.Normal
+        )
+        Text(
+            text = endTitle,
+            modifier = Modifier.clickable {  },
+            fontWeight = FontWeight.Bold,
+            fontSize = FontSize.Normal
+        )
+    }
+    LazyRow(
+        horizontalArrangement = Arrangement.spacedBy(8.dp),
+        state = rememberLazyListState()
+    ) {
+        items(menuList.take(8)) { item ->
+            Card(
+                Modifier
+                    .clickable {
+                        // dont forget to add logic
+                    }
+                    .wrapContentHeight()
+                    .padding(2.dp),
+                colors = CardDefaults.cardColors().copy(
+                    containerColor = DarkPrimaryTransparent2,
+                    contentColor = Color.White
+                )
+            ) {
+                Column(Modifier.width(144.dp)) {
+                    Box(
+                        Modifier.height(124.dp)
+                    ) {
+                        ImageCoil(
+                            item.imageUrl,
+                            scaleCustom = true,
+                            contentScale = ContentScale.Crop,
+                            fillMaxWidth = true,
+                            modifier = Modifier.fillMaxWidth()
+                        )
+                    }
+                    Column(Modifier.padding(4.dp)) {
+                        Text(
+                            item.name,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                        Text(
+                            "${item.description}",
+                            fontSize = FontSize.Small,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
+                        Text(
+                            "Rp ${item.price}",
+                            fontWeight = FontWeight.Bold,
+                            fontSize = FontSize.Normal,
+                            maxLines = 1,
+                            overflow = TextOverflow.Ellipsis
+                        )
                     }
                 }
             }
         }
-        NeoButton("Subcription Package") {
-            navController.navigate(Screen.SubscriptionScreen)
-        }
     }
-
 }

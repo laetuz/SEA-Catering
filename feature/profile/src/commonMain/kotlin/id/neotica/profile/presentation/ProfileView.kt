@@ -4,6 +4,7 @@ import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.PaddingValues
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -174,49 +175,59 @@ fun ProfileView(
             ) {
                 LazyColumn {
                     item {
-                        if (profile == null) LoadingIndicator()
-                        profile?.let {
-                            Column(
-                                Modifier
-                                    .fillMaxWidth()
-                                    .padding(vertical = 32.dp),
-                                horizontalAlignment = Alignment.CenterHorizontally
-                            ) {
-                                ImageCoil(
-                                    size = 100.dp,
-                                    url = it.imageUrl,
-                                    round = true
-                                )
-                                Spacer(Modifier.padding(8.dp))
-                                Text(
-                                    text = it.username,
-                                    fontSize = FontSize.Big,
-                                    fontWeight = FontWeight.Bold
-                                )
-
-                                Text(
-                                    text = it.email,
-                                    fontSize = FontSize.Normal,
-                                    color = TransparentText20,
-                                    fontWeight = FontWeight.Light
-                                )
-                            }
-                        }
+//                        if (profile == null) LoadingIndicator()
+//                        profile?.let {
+//                            Column(
+//                                Modifier
+//                                    .fillMaxWidth()
+//                                    .padding(vertical = 32.dp),
+//                                horizontalAlignment = Alignment.CenterHorizontally
+//                            ) {
+//                                ImageCoil(
+//                                    size = 100.dp,
+//                                    url = it.imageUrl,
+//                                    round = true
+//                                )
+//                                Spacer(Modifier.padding(8.dp))
+//                                Text(
+//                                    text = it.username,
+//                                    fontSize = FontSize.Big,
+//                                    fontWeight = FontWeight.Bold
+//                                )
+//
+//                                Text(
+//                                    text = it.email,
+//                                    fontSize = FontSize.Normal,
+//                                    color = TransparentText20,
+//                                    fontWeight = FontWeight.Light
+//                                )
+//                            }
+//                        }
 
                         Column(
                             modifier = Modifier
                                 .fillMaxWidth()
                                 .padding(horizontal = 16.dp)
                         ) {
-                            MenuItem(
-                                "Edit Profile",
+//                            MenuItem(
+//                                "Edit Profile",
+//                            ) {
+//                                navController.navigate(Screen.EditProfileScreen(profPic = profile?.imageUrl ?: ""))
+//                            }
+//                            MenuItem(
+//                                "Account Settings",
+//                            ) {
+//                                showAccountSettingsBottomSheet = true
+//                            }
+
+                            Row(
                             ) {
-                                navController.navigate(Screen.EditProfileScreen(profPic = profile?.imageUrl ?: ""))
+                                Text("Your subscription:")
+                                Spacer(Modifier.padding(8.dp))
+                                Text("None")
                             }
-                            MenuItem(
-                                "Account Settings",
-                            ) {
-                                showAccountSettingsBottomSheet = true
+                            NeoButton("BUY SUBSCRIPTION") {
+                                navController.navigate(Screen.SubscriptionScreen)
                             }
 
                             Spacer(Modifier.padding(16.dp))

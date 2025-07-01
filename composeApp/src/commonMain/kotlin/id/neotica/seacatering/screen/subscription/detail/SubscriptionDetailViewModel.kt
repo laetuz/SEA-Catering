@@ -1,4 +1,4 @@
-package id.neotica.seacatering.screen.subscription.confirmation
+package id.neotica.seacatering.screen.subscription.detail
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
