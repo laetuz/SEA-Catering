@@ -39,9 +39,9 @@ Form to select and buy packages.
 ### 🛠️ Admin
 
 #### 📊 Admin Dashboard
-View statistics such as new subscriptions, MRR, growth, and reactivations.
+View statistics such as new subscriptions and stuff.
 
-<img src="isi nanti" width="300">
+<img src="https://github.com/user-attachments/assets/5ed237dd-1686-433c-bd4c-6f3c93f30527" width="300">
 
 
 ## Architecture & Tech Stack
